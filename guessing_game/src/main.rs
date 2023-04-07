@@ -8,5 +8,11 @@ fn main() {
 
     let mut guess=String::new();
     io::stdin().read_line( &mut guess).expect("Couldn't grab the input");
-    println!("Guessed number {guess} and rand is {secret_number}");
+    if secret_number==guess.parse::<i32>().unwrap(){
+        println!("Guessed number {guess} and rand is {secret_number} Congrats you win!");
+
+    }
+    else {
+        println!("Guessed number {guess} and rand is {secret_number}");
+    }
 }
